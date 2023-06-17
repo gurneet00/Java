@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Intro">
+    <listeners>
+        <listener class-name="Listeners.WebDriverListeners"></listener>
+    </listeners>
+    <test name = "CQ">
+        <classes>
+            <class name = "CQ.TestNg">
+                <methods>
+                    <include name="test1" />
+                    <include name="test2" />
+                    <include name="test3" />
+                    <include name="test4" />
+                </methods>
+            </class>
+            <class name = "CQ.Login_page_Alerts">
+                <methods>
+                    <include name="f2" />
+                    <include name="f3" />
+                    <include name="f4" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+
