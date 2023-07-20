@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
 public class Links {
-    static public void main(String[] args) throws InterruptedException, IOException {
+    static public void main(String[] args) throws IOException, InterruptedException {
         WebDriver web = new ChromeDriver();
         int itr,rc=0,dcount;
 

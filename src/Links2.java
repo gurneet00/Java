@@ -44,28 +44,28 @@ public class Links2{
             int ccount =0;
             orow.createCell(ccount++).setCellValue(ID);
             if(Objects.equals(web.getCurrentUrl(), "https://test.codequotient.com/quest/add/" + ID)){
-            String title = web.findElement(By.xpath("//*[@name=\"txtQuesTitle\"]")).getAttribute("value");
-            String score = web.findElement(By.xpath("//*[@name=\"score\"]")).getAttribute("value");
-            List<WebElement> key = web.findElements(By.xpath("//*[@class=\"tag-editor ui-sortable\"]//div[2]"));
-            String type = web.findElement(By.xpath("//*[@data-id=\"type\"]")).getText();
-            String des = web.findElement(By.xpath("//*[@id=\"editorQuil\"]/div[1]")).getText();
+                String title = web.findElement(By.xpath("//*[@name=\"txtQuesTitle\"]")).getAttribute("value");
+                String score = web.findElement(By.xpath("//*[@name=\"score\"]")).getAttribute("value");
+                List<WebElement> key = web.findElements(By.xpath("//*[@class=\"tag-editor ui-sortable\"]//div[2]"));
+                String type = web.findElement(By.xpath("//*[@data-id=\"type\"]")).getText();
+                String des = web.findElement(By.xpath("//*[@id=\"editorQuil\"]/div[1]")).getText();
 
-            // write in excel
+                // write in excel
 
-            orow.createCell(ccount++).setCellValue(title);
-            orow.createCell(ccount++).setCellValue(type);
-            orow.createCell(ccount++).setCellValue(score);
-            orow.createCell(ccount++).setCellValue("https://test.codequotient.com/quest/preview/"+ID);
-            orow.createCell(ccount++).setCellValue(des);
-            for (WebElement webElement : key) orow.createCell(ccount++).setCellValue(webElement.getText());
+                orow.createCell(ccount++).setCellValue(title);
+                orow.createCell(ccount++).setCellValue(type);
+                orow.createCell(ccount++).setCellValue(score);
+                orow.createCell(ccount++).setCellValue("https://test.codequotient.com/quest/preview/"+ID);
+                orow.createCell(ccount++).setCellValue(des);
+                for (WebElement webElement : key) orow.createCell(ccount++).setCellValue(webElement.getText());
 
-        }
+            }
             else{
 
                 orow.createCell(1).setCellValue("Locked question");
             }
 
-            }
+        }
         odexcl.write(odfstram);
         odfstram.close();
         web.close();
