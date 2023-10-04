@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +17,8 @@ import java.util.List;
 public class Course_Links {
     static public void main(String[] args) throws IOException, InterruptedException {
         WebDriver web = new ChromeDriver();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Nokia\\IdeaProjects\\Intro");
+       System.setProperty("webdriver.chrome.driver", "C:\\Users\\gurha\\IdeaProjects");
+
         System.out.println();
         int itr,rc=0,ccount=0;
 
