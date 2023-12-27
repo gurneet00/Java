@@ -1,3 +1,5 @@
+package CQlinks;
+
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -25,13 +27,13 @@ public class Links {
         web.findElement(By.id("btnSubmit")).click();
 
         //read excel file
-        FileInputStream IFstream = new FileInputStream("C:\\Users\\Nokia\\Documents\\Links.xlsx");             // input file
+        FileInputStream IFstream = new FileInputStream("C:\\Users\\gurha\\Documents\\Links.xlsx");             // input file
         XSSFWorkbook oexcl = new XSSFWorkbook(IFstream);
         XSSFSheet Sheet = oexcl.getSheetAt(0);
         int rowcnt = Sheet.getLastRowNum();
 
         //new file
-        FileOutputStream odfstram = new FileOutputStream("C:\\Users\\Nokia\\Documents\\ID.xlsx");            // output file
+        FileOutputStream odfstram = new FileOutputStream("C:\\Users\\gurha\\Documents\\ID.xlsx");            // output file
         XSSFWorkbook odexcl = new XSSFWorkbook();
         XSSFSheet odsheet = odexcl.createSheet("Sheet1");
 

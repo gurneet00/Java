@@ -10,6 +10,9 @@ import java.util.Scanner;
 // Do NOT change the class name
 class Main
 {
+    public Main(int n) {
+    }
+
     public static void main(String[] args) throws InterruptedException
     {
         WebDriver w1 = new ChromeDriver();

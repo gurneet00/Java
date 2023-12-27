@@ -1,3 +1,5 @@
+package CQlinks;
+
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -26,24 +28,24 @@ public class Links2{
         web.findElement(By.id("btnSubmit")).click();
 
         //read excel file
-        FileInputStream IFstream = new FileInputStream("C:\\Users\\Nokia\\Documents\\ID.xlsx");             // input file
+        FileInputStream IFstream = new FileInputStream("C:\\Users\\gurha\\OneDrive\\Documents\\ID.xlsx");             // input file
         XSSFWorkbook oexcl = new XSSFWorkbook(IFstream);
         XSSFSheet Sheet = oexcl.getSheetAt(0);
         int nrowcnt = Sheet.getLastRowNum();
 
         //new file
-        FileOutputStream odfstram = new FileOutputStream("C:\\Users\\Nokia\\Documents\\Ques.xlsx");            // output file
+        FileOutputStream odfstram = new FileOutputStream("C:\\Users\\gurha\\OneDrive\\Documents\\Ques.xlsx");            // output file
         XSSFWorkbook odexcl = new XSSFWorkbook();
         XSSFSheet odsheet = odexcl.createSheet("Sheet1");
 
         for(int k=0;k<=nrowcnt;k++) {
 
             String ID = String.valueOf(Sheet.getRow(k).getCell(0));
-            web.get("https://test.codequotient.com/quest/add/" + ID);
+            web.get("https://codequotient.com/quest/add/" + ID);
             XSSFRow orow = odsheet.createRow(rc++);
             int ccount =0;
             orow.createCell(ccount++).setCellValue(ID);
-            if(Objects.equals(web.getCurrentUrl(), "https://test.codequotient.com/quest/add/" + ID)){
+            if(Objects.equals(web.getCurrentUrl(), "https://codequotient.com/quest/add/" + ID)){
                 String title = web.findElement(By.xpath("//*[@name=\"txtQuesTitle\"]")).getAttribute("value");
                 String score = web.findElement(By.xpath("//*[@name=\"score\"]")).getAttribute("value");
                 List<WebElement> key = web.findElements(By.xpath("//*[@class=\"tag-editor ui-sortable\"]//div[2]"));
@@ -55,7 +57,7 @@ public class Links2{
                 orow.createCell(ccount++).setCellValue(title);
                 orow.createCell(ccount++).setCellValue(type);
                 orow.createCell(ccount++).setCellValue(score);
-                orow.createCell(ccount++).setCellValue("https://test.codequotient.com/quest/preview/"+ID);
+                orow.createCell(ccount++).setCellValue("https:codequotient.com/quest/preview/"+ID);
                 orow.createCell(ccount++).setCellValue(des);
                 for (WebElement webElement : key) orow.createCell(ccount++).setCellValue(webElement.getText());
 

@@ -1,5 +1,5 @@
 //input array :
-//        remove duplicated and print cnct instead of this number
+//        remove duplicated and print count instead of this number
 //        [1,1,1,3,0,8]
 //        [3,3,0,8]
 //        [2,0,8]
