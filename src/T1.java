@@ -22,6 +22,7 @@ class Patient {
         System.out.println("Date of Birth: " + dateOfBirth);
         System.out.println("Address: " + address);
         System.out.println("Phone Number: " + phoneNumber);
+
     }
 }
 
