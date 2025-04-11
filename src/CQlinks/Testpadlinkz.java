@@ -28,7 +28,7 @@ public class Testpadlinkz {
         web.manage().window().maximize();
         web.switchTo().frame("loginIframe");
         web.findElement(By.xpath("//input[@id='email']") ).sendKeys("gurharneet.singh@codequotient.com");
-        web.findElement(By.id("password")).sendKeys("Test@123");
+        web.findElement(By.id("password")).sendKeys("Gurneet@08");
         web.findElement(By.id("submit")).click();
 
         //read excel file

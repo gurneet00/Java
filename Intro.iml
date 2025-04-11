@@ -7,9 +7,9 @@
     </content>
     <orderEntry type="jdk" jdkName="openjdk-20" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="testng" level="project" />
-    <orderEntry type="module-library">
-      <library>
+    <orderEntry type="library" exported="" name="testng" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library name="JAVA Files">
         <CLASSES>
           <root url="jar://$MODULE_DIR$/lib/apache-poi-bin-5.2.3/auxiliary/batik-anim-1.14.jar!/" />
           <root url="jar://$MODULE_DIR$/lib/apache-poi-bin-5.2.3/auxiliary/batik-awt-util-1.14.jar!/" />
@@ -202,6 +202,19 @@
         <jarDirectory url="file://$MODULE_DIR$/lib/selenium-java-4.13.0" recursive="false" />
         <jarDirectory url="file://$MODULE_DIR$/lib/selenium-java-4.13.0/lib" recursive="false" />
         <jarDirectory url="file://$MODULE_DIR$/lib/selenium-java-4.13.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../selenium-java-4.31.0" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../selenium-java-4.31.0" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../selenium-java-4.31.0" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../selenium-java-4.31.0" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>
